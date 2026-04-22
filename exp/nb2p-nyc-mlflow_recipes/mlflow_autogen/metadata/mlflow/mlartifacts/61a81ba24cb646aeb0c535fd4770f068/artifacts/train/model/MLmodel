@@ -1,0 +1,32 @@
+artifact_path: train/model
+flavors:
+  python_function:
+    artifacts:
+      model_path:
+        path: artifacts/sk_model
+        uri: /home/mlcask/.mlflow/recipes/21cf4e01d251647f08ce91070b2c054773bf73ebca54e7f3e9cdb12eb2871350/steps/train/outputs/sk_model
+    cloudpickle_version: 3.0.0
+    code: code
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.11.5
+  sklearn:
+    code: code
+    pickled_model: artifacts/sk_model/model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.2.2
+mlflow_version: 2.11.3
+model_uuid: cd6ac60768a44b5bbd288f61b2fab8af
+run_id: 61a81ba24cb646aeb0c535fd4770f068
+signature:
+  inputs: '[{"type": "datetime", "name": "tpep_pickup_datetime", "required": true},
+    {"type": "datetime", "name": "tpep_dropoff_datetime", "required": true}, {"type":
+    "double", "name": "trip_distance", "required": true}, {"type": "integer", "name":
+    "pickup_zip", "required": true}, {"type": "integer", "name": "dropoff_zip", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-04-10 06:24:47.703084'

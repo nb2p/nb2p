@@ -1,0 +1,12 @@
+{
+    "vertices": [
+        "comp1",
+        "comp2",
+        "comp3"
+    ],
+    "edges": [
+        {"source": "comp1", "target": "comp2", "flow": ["df"]},
+        {"source": "comp1", "target": "comp3", "flow": ["df_val"]},
+        {"source": "comp2", "target": "comp3", "flow": ["df_train"]}
+    ]
+}

@@ -1,0 +1,6 @@
+experiment:
+  name: "taxi_fare_regression"
+  tracking_uri: "sqlite:///metadata/mlflow/mlruns.db"
+  artifact_location: "./metadata/mlflow/mlartifacts"
+model_registry:
+  model_name: "taxi_fare_regression"

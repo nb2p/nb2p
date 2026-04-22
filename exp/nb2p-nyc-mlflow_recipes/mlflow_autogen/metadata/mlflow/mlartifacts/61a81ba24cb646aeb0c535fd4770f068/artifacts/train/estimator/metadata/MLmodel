@@ -1,0 +1,47 @@
+artifact_path: train/estimator
+flavors:
+  python_function:
+    code: code
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.5
+  sklearn:
+    code: code
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.2.2
+mlflow_version: 2.11.3
+model_size_bytes: 22431
+model_uuid: 42fd69e5e39f4d3eb15c884b9070f2ac
+run_id: 61a81ba24cb646aeb0c535fd4770f068
+signature:
+  inputs: '[{"type": "double", "name": "f_00", "required": true}, {"type": "double",
+    "name": "f_01", "required": true}, {"type": "double", "name": "f_02", "required":
+    true}, {"type": "double", "name": "f_03", "required": true}, {"type": "double",
+    "name": "f_04", "required": true}, {"type": "double", "name": "f_05", "required":
+    true}, {"type": "double", "name": "f_06", "required": true}, {"type": "double",
+    "name": "f_07", "required": true}, {"type": "double", "name": "f_08", "required":
+    true}, {"type": "double", "name": "f_09", "required": true}, {"type": "double",
+    "name": "f_10", "required": true}, {"type": "double", "name": "f_11", "required":
+    true}, {"type": "double", "name": "f_12", "required": true}, {"type": "double",
+    "name": "f_13", "required": true}, {"type": "double", "name": "f_14", "required":
+    true}, {"type": "double", "name": "f_15", "required": true}, {"type": "double",
+    "name": "f_16", "required": true}, {"type": "double", "name": "f_17", "required":
+    true}, {"type": "double", "name": "f_18", "required": true}, {"type": "double",
+    "name": "f_19", "required": true}, {"type": "double", "name": "f_20", "required":
+    true}, {"type": "double", "name": "f_21", "required": true}, {"type": "double",
+    "name": "f_22", "required": true}, {"type": "double", "name": "f_23", "required":
+    true}, {"type": "double", "name": "f_24", "required": true}, {"type": "double",
+    "name": "f_25", "required": true}, {"type": "double", "name": "f_26", "required":
+    true}, {"type": "double", "name": "f_27", "required": true}, {"type": "double",
+    "name": "f_28", "required": true}, {"type": "double", "name": "f_29", "required":
+    true}, {"type": "double", "name": "f_30", "required": true}, {"type": "double",
+    "name": "f_31", "required": true}, {"type": "double", "name": "f_32", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-04-10 06:24:43.280104'

@@ -1,0 +1,72 @@
+### Core settings
+
+# Database connection. Currently using MongoDB.
+[database]
+# Database address
+addr = '127.0.0.1'
+# Database port
+port = 27010
+
+# NBSegment-DistilKaggle dataset
+[nbsegment.distilkaggle]
+# Dataset path
+prefix = '/ssd/haotian/scs/distilkaggle'
+# Database name in MongoDB
+db_name = 'nb2p-dk'
+
+# AST parser. Currently using tree-sitter.
+[parser]
+# Parser (Python) file path.
+path = 'build/tree-sitter-python.so'
+
+# fastText word embedding.
+[fasttext]
+# Model file path.
+path = 'build/lid.176.ftz'
+
+
+### Backend Settings
+
+# Code representation model.
+[code_repr]
+# Device to load model into. (Default: CPU)
+device = 'cuda'
+
+# Decision Tree segment transition model.
+[seg_trans.dtree]
+# Is method enabled.
+enabled = true
+# Model file path.
+model_path = '/ssd/haotian/scs/distilkaggle/models/full/astn4_256-dtree-depth_64-minsplit_0.001.joblib'
+
+# Random Forest segment transition model.
+[seg_trans.rforest]
+# Is method enabled.
+enabled = true
+# Model file path.
+model_path = '/ssd/haotian/scs/distilkaggle/models/full/astn4_256-rforest-n_100-depth_64-minsplit_0.001.joblib'
+
+# XGBoost segment transition model.
+[seg_trans.xgboost]
+# Is method enabled.
+enabled = true
+# Model file path.
+model_path = '/ssd/haotian/scs/distilkaggle/models/full/astn4_256-xgboost-depth_8-minsplit_0.001.joblib'
+
+# Transformer segment transition model.
+[seg_trans.transformer]
+# Is method enabled.
+enabled = true
+# Model file path.
+model_path = '/ssd/haotian/scs/distilkaggle/logs/full/astn4_256-transformer_bf_ff512_l4-e50.pt'
+# Device to load model into. (Default: CPU)
+device = 'cuda:0'
+
+# NB2P-SS segment transition model.
+[seg_trans.nb2pss]
+# Is method enabled.
+enabled = true
+# Model file path.
+model_path = '/ssd/haotian/scs/distilkaggle/logs/full/astn4_256-nb2pdecoder_bf_ff512_l4-e50.pt'
+# Device to load model into. (Default: CPU)
+device = 'cuda:0'

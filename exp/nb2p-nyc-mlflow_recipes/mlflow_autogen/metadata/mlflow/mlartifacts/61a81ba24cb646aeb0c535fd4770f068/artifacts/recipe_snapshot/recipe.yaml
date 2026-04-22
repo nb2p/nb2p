@@ -1,0 +1,28 @@
+recipe: "regression/v1"
+target_col: "fare_amount"
+primary_metric: "root_mean_squared_error"
+steps:
+  ingest:
+    using: parquet
+    location: "../data/nyc.parquet"
+  transform:
+    using: custom
+    transformer_method: comp2
+  train:
+    using: custom
+    estimator_method: comp3
+  evaluate:
+    validation_criteria:
+      - metric: root_mean_squared_error
+        threshold: 10
+      - metric: mean_absolute_error
+        threshold: 50
+  register:
+    allow_non_validated_model: false
+  ingest_scoring:
+    using: parquet
+    location: "../data/nyc.parquet"
+  predict:
+    output:
+      using: parquet
+      location: "../data/nyc_output.parquet"
